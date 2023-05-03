@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-10 10:49:15 AM"/>
+        <attribute name="created" value="VVNFUjtQUExHMTIyMDkxODItQ0k7MjAyMy0wMy0xMDsxMDowMzo1NyBBTTsyNDc2"/>
+        <attribute name="edited" value="VVNFUjtQUExHMTIyMDkxODItQ0k7MjAyMy0wMy0xMDsxMDo0OToxNSBBTTsxOzI1ODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil1, bil2, bil3, rata" type="Integer" array="False" size=""/>
+            <input variable="bil1"/>
+            <input variable="bil2"/>
+            <input variable="bil3"/>
+            <if expression="bil1&gt;bil2">
+                <then>
+                    <if expression="bil2&gt;bil3">
+                        <then>
+                            <assign variable="rata" expression="bil2"/>
+                        </then>
+                        <else>
+                            <if expression="bil1&gt;3">
+                                <then>
+                                    <assign variable="rata" expression="bil3"/>
+                                </then>
+                                <else>
+                                    <assign variable="rata" expression="bil1"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="bil1&gt;bil3">
+                        <then>
+                            <assign variable="rata" expression="bil1"/>
+                        </then>
+                        <else>
+                            <if expression="bil2&gt;bil3">
+                                <then>
+                                    <assign variable="rata" expression="bil3"/>
+                                </then>
+                                <else>
+                                    <assign variable="rata" expression="bil2"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Bilangan dengan nilai rata: &quot;&amp;rata" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
